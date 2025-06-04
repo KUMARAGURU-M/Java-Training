@@ -45,7 +45,7 @@ class LLImplementation {
         }
 
         if (temp == null) {
-            System.out.println("Position out of bounds.");
+            System.out.println("out of bound");
             return;
         }
 
@@ -89,7 +89,7 @@ class LLImplementation {
         }
 
         if (temp.next == null) {
-            System.out.println("Position out of bounds.");
+            System.out.println("out of bound");
             return;
         }
 
@@ -109,7 +109,7 @@ class LLImplementation {
     public void middle(){
         Node curr= head;
         if (curr == null) {
-            System.out.println("List is empty.");
+            System.out.println("empty.");
             return;
         }
         Node fast=curr;
@@ -133,12 +133,6 @@ class LLImplementation {
             curr=next;
         }
         head=prev;
-    }
-
-    // delete every k node
-    public void delete_K_node(int k){
-        Node curr= head;
-
     }
 }
 
