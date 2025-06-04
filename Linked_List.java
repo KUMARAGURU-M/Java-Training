@@ -10,12 +10,16 @@ class LLImplementation {
 
     private Node head = null;
 
+    
+    //insert begining
     public void insertBeg(int data) {
         Node node = new Node(data);
         node.next = head;
         head = node;
     }
 
+
+    //insert Last
     public void insertLast(int data) {
         Node node = new Node(data);
         if (head == null) {
@@ -29,6 +33,8 @@ class LLImplementation {
         temp.next = node;
     }
 
+
+    //insert position
     public void insertPos(int data, int pos) {
         if (pos <= 1 || head == null) {
             insertBeg(data);
@@ -53,11 +59,14 @@ class LLImplementation {
         temp.next = node;
     }
 
+
+    //delete beg
     public void DeleteBeg() {
         if (head == null) return;
         head = head.next;
     }
 
+    //delete last
     public void DeleteLast() {
         if (head == null) return;
 
@@ -74,6 +83,8 @@ class LLImplementation {
         temp.next = null;
     }
 
+
+    //delete position
     public void DeletePos(int pos) {
         if (head == null || pos <= 1) {
             DeleteBeg();
@@ -96,6 +107,8 @@ class LLImplementation {
         temp.next = temp.next.next;
     }
 
+
+    //display
     public void display() {
         Node temp = head;
         while (temp != null) {
